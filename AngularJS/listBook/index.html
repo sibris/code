@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+	<style>
+		.grey{background: #ccc;}
+	    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+			display: none;
+	    }
+	</style>
+</head>
+<body ng-cloak>
+
+<main>
+	<div class="container">
+
+		<div ui-view class="slide-animation"></div>
+
+		<a ui-sref="home" class="btn btn-default">Home</a>
+		<a ui-sref="book" class="btn btn-default">Book</a>
+
+	</div>
+
+</main>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="angular/angular.min.js"></script>
+<script src="angular/angular-animate.min.js"></script>
+<script src="angular/angular-ui-router.js"></script>
+<!-- <script src="angular/angular-route.min.js"></script> -->
+<script src="https://code.angularjs.org/1.5.8/i18n/angular-locale_ru-ru.js"></script>
+<script src="scipts.js"></script>
+<script src="services/my-factory.js"></script>
+<script src="controllers/books-controller.js"></script>
+<script src="controllers/book-controller.js"></script>
+<script src="directives/wfm-dir.js"></script>
+	
+</body>
+</html>

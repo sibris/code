@@ -1,0 +1,22 @@
+<h1>Список книг</h1>
+<p><input type="text" name="search" class="form-control" ng-model="search.title"></p>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Название</th>
+			<th>Автор</th>
+			<th>Год</th>
+			<th>Цена</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="book in books | filter: search" class="repeat-animation">
+			<td>{{$index + 1}}</td>
+			<td><a href="#/book/{{book.id}}">{{book.title | myFilter : '!' : '?'}}</a></td>
+			<td>{{book.author}}</td>
+			<td>{{book.year}}</td>
+			<td>{{book.price | currency : 'руб.' : 0}}</td>
+		</tr>
+	</tbody>
+</table>
